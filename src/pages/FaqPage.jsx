@@ -5,7 +5,6 @@ const FaqPage = () => {
     return (
         <div>
             <FaqComponents />
-
         </div>
     )
 }
