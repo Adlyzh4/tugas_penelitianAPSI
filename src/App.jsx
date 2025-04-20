@@ -7,6 +7,8 @@ import FaqPage from "./pages/FaqPage";
 import Testi from "./pages/Testi";
 import About from './pages/About';
 import Contact from './pages/Contact';
+import AuthPage from './pages/AuthPage';
+import AdminDashboard from './pages/AdminDashboard';
 
 
 function App() {
@@ -15,12 +17,15 @@ function App() {
       <NavbarComponent />
 
       <Routes>
-        <Route path="/" Component={HomePage} />
-        <Route path="/menu" Component={Menu} />
-        <Route path="/about" Component={About} />
-        <Route path="/testi" Component={Testi} />
-        <Route path="/faq" Component={FaqPage} />
-        <Route path="/contact" Component={Contact} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/testi" element={<Testi />} />
+        <Route path="/faq" element={<FaqPage />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/auth" element={<AuthPage />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+
       </Routes>
 
       <FooterComponent />

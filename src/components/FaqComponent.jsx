@@ -3,28 +3,50 @@ import {faq} from '../data/index'
 
 const FaqComponents = () => {
     return (
-        <div className='faq'>
+        <div className='faq py-5' style={{ background: '#fdfdfd' }}>
             <Container>
                 <Row>
                     <Col>
-                        <h2 className='text-center fw-bold'>Pertanyaan yg Mereka Sering Tanya Tentang Kita!</h2>
+                        <h2 className='text-center fw-bold mb-5' style={{
+                            fontFamily: 'Poppins, sans-serif',
+                            fontSize: '2rem',
+                            color: '#222'
+                        }}>
+                            🤔 Pertanyaan yang <span style={{ color: '#ff4b2b' }}>Sering Ditanya</span> Tentang Kita!
+                        </h2>
                     </Col>
                 </Row>
-                <Row className='row-cols-lg-2 row-cols-1 g-4 pt-5'>
-                    {faq.map((data) => {
+                <Row className='row-cols-lg-2 row-cols-1 g-4'>
+                    {faq.map((faq) => {
                         return (
-                            <Col key={data.id }>
-                                <Accordion className='shadow-sm'>
-                                    <Accordion.Item eventKey={data.eventKey}>
-                                        <Accordion.Header>{data.title}</Accordion.Header>
-                                        <Accordion.Body>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                            aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                            culpa qui officia deserunt mollit anim id est laborum.
+                            <Col key={faq.id}>
+                                <Accordion flush>
+                                    <Accordion.Item eventKey={faq.eventKey}
+                                        style={{
+                                            border: '1px solid rgba(255, 75, 43, 0.2)',
+                                            borderRadius: '16px',
+                                            overflow: 'hidden',
+                                            boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
+                                            background: '#fff',
+                                            transition: 'all 0.3s ease-in-out'
+                                        }}
+                                    >
+                                        <Accordion.Header style={{
+                                            fontFamily: 'Poppins, sans-serif',
+                                            fontWeight: '600',
+                                            fontSize: '1.05rem',
+                                            color: '#222'
+                                        }}>
+                                            {faq.title}
+                                        </Accordion.Header>
+                                        <Accordion.Body style={{
+                                            fontFamily: 'Poppins, sans-serif',
+                                            color: '#555',
+                                            background: '#fffdfd',
+                                            borderTop: '1px solid rgba(0,0,0,0.05)',
+                                            lineHeight: '1.7'
+                                        }}>
+                                        <small className="fw-bold">{faq.desc}</small>
                                         </Accordion.Body>
                                     </Accordion.Item>
                                 </Accordion>
@@ -34,7 +56,8 @@ const FaqComponents = () => {
                 </Row>
             </Container>
         </div>
-    )
+    );
+    
 }
 
 export default FaqComponents;

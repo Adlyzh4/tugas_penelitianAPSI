@@ -12,10 +12,12 @@ import People1 from "../assets/img/testi/people-1.jpg";
 import People2 from "../assets/img/testi/people-2.jpg";
 import People3 from "../assets/img/testi/people-3.jpg";
 
+import Member from "../assets/img/logomember.png";
+
 export const navLinks = [
   {
     id: 1,
-    path: "",
+    path: "home",
     text: "Home",
   },
   {
@@ -36,13 +38,13 @@ export const navLinks = [
 
   {
     id: 5,
-    path: '/about',
+    path: 'about',
     text: 'About'
   },
 
   {
     id: 6,
-    path: '/contact',
+    path: 'contact',
     text: 'Contact'
   }
 ];
@@ -270,48 +272,6 @@ export const testimonial = [
     name: "People 3",
     skill: "Food Reviewer",
   },
-  {
-    id: 4,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People1,
-    name: "People 4",
-    skill: "Food Reviewer",
-  },
-  {
-    id: 5,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People2,
-    name: "People 5",
-    skill: "Food Reviewer",
-  },
-  {
-    id: 6,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People3,
-    name: "People 6",
-    skill: "Food Reviewer",
-  },
-  {
-    id: 7,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People1,
-    name: "People 7",
-    skill: "Food Reviewer",
-  },
-  {
-    id: 8,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People2,
-    name: "People 8",
-    skill: "Food Reviewer",
-  },
-  {
-    id: 9,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People3,
-    name: "People 9",
-    skill: "Food Reviewer",
-  },
 ];
 
 
@@ -364,50 +324,72 @@ export const faq = [
   {
     id: 1,
     eventKey: 0,
-    title: "Dimana Lokasinya?",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
+    title: "Di mana lokasi Chicken Sizzle?",
+    desc: "Chicken Sizzle berlokasi di pusat kota, tepatnya di Jl. Palakali No. 56, Kota Depok. Kami hadir di lokasi strategis agar mudah diakses, dengan suasana nyaman dan interior elegan yang dirancang khusus untuk pengalaman bersantap yang tak terlupakan.",
   },
   {
     id: 2,
     eventKey: 1,
-    title: "Dimana Lokasinya?",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
+    title: "Apakah bisa reservasi meja sebelumnya?",
+    desc: "Tentu, kami sangat menyarankan untuk melakukan reservasi terlebih dahulu, terutama di akhir pekan atau hari libur. Anda dapat melakukan reservasi melalui website resmi kami atau menghubungi langsung tim layanan pelanggan kami yang siap membantu dengan ramah.",
   },
   {
     id: 3,
     eventKey: 2,
-    title: "Dimana Lokasinya?",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
+    title: "Apakah tersedia layanan pesan antar?",
+    desc: "Ya, kami menyediakan layanan pesan antar eksklusif yang menjamin kualitas rasa tetap premium meski dinikmati di rumah. Kami bekerja sama dengan beberapa platform terpercaya serta memiliki layanan pengantaran pribadi untuk area tertentu.",
   },
   {
     id: 4,
     eventKey: 3,
-    title: "Dimana Lokasinya?",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
+    title: "Apa menu andalan di Chicken Sizzle?",
+    desc: "Menu andalan kami adalah **Signature Grilled Chicken Sizzle** — ayam panggang lembut dengan bumbu rahasia khas kami, disajikan panas di atas hotplate dengan saus spesial. Perpaduan rasa gurih, smoky, dan elegan yang memanjakan lidah.",
   },
   {
     id: 5,
     eventKey: 4,
-    title: "Dimana Lokasinya?",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
+    title: "Apakah restoran menyediakan menu untuk vegetarian?",
+    desc: "Kami menghargai semua preferensi dan kebutuhan pelanggan. Oleh karena itu, kami juga menyediakan beberapa pilihan menu vegetarian yang dirancang dengan rasa yang tetap mewah dan menggugah selera, tanpa mengurangi kualitas penyajian kami.",
   },
   {
     id: 6,
     eventKey: 5,
-    title: "Dimana Lokasinya?",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
+    title: "Apakah Chicken Sizzle menerima kerja sama acara?",
+    desc: "Dengan senang hati! Kami melayani berbagai jenis acara seperti ulang tahun, gathering, hingga private dining. Tim kami akan membantu menyesuaikan konsep dan menu agar setiap momen Anda terasa istimewa dan berkelas.",
+  },
+];
+
+
+export const Group = [
+  {
+    id: 1,
+    image: Member,
+    name: "Retno Triyas",
+    role: "UI/UX Designer",
   },
   {
-    id: 7,
-    eventKey: 6,
-    title: "Dimana Lokasinya?",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
+    id: 2,
+    image: Member,
+    name: "Ahmad Ferdi",
+    role: "Backend Developer",
   },
   {
-    id: 8,
-    eventKey: 7,
-    title: "Dimana Lokasinya?",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
+    id: 3,
+    image: Member,
+    name: "Fikri Ramadhan",
+    role: "Frontend Developer",
+  },
+  {
+    id: 4,
+    image: Member,
+    name: "Naufal Rafi",
+    role: "Database Engineer",
+  },
+  {
+    id: 5,
+    image: Member,
+    name: "Ahmad Diaz",
+    role: "Project Manager",
   },
 ];
 
