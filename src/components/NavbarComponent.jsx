@@ -28,7 +28,7 @@ const NavbarComponents = () => {
 >
 
             <Container>
-                <Navbar.Brand href="/home" className="fs-3 fw-bold text-danger-emphasis" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '1px' }}>
+                <Navbar.Brand href="/" className="fs-3 fw-bold text-danger-emphasis" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '1px' }}>
                     Chicken Sizzle<span style={{ color: '#ff5555' }}>.</span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -13,11 +13,12 @@ import People2 from "../assets/img/testi/people-2.jpg";
 import People3 from "../assets/img/testi/people-3.jpg";
 
 import Member from "../assets/img/logomember.png";
+import promoLogo from "../assets/img/logopromo3.png";
 
 export const navLinks = [
   {
     id: 1,
-    path: "home",
+    path: "/",
     text: "Home",
   },
   {
@@ -39,13 +40,13 @@ export const navLinks = [
   {
     id: 5,
     path: 'about',
-    text: 'About'
+    text: 'About Us'
   },
 
   {
     id: 6,
     path: 'contact',
-    text: 'Contact'
+    text: 'Contact Us'
   }
 ];
 
@@ -61,7 +62,10 @@ export const semuaMenu = [
     title: "Steak Ayam Barbeque",
     price: "Rp. 300.000",
     buy: "Pesan Sekarang",
+    promoPrice: "Rp. 250.000",
+    promoLogo: promoLogo,
     delay: "1300",
+    isPromo: true,
   },
   {
     id: 2,
@@ -130,7 +134,7 @@ export const semuaMenu = [
   },
   {
     id: 7,
-    image: MenuImage7,
+    image: MenuImage1,
     star1: "fa-solid fa-star",
     star2: "fa-solid fa-star",
     star3: "fa-solid fa-star",
@@ -143,7 +147,7 @@ export const semuaMenu = [
   },
   {
     id: 8,
-    image: MenuImage8,
+    image: MenuImage2,
     star1: "fa-solid fa-star",
     star2: "fa-solid fa-star",
     star3: "fa-solid fa-star",
@@ -156,7 +160,7 @@ export const semuaMenu = [
   },
   {
     id: 9,
-    image: MenuImage9,
+    image: MenuImage3,
     star1: "fa-solid fa-star",
     star2: "fa-solid fa-star",
     star3: "fa-solid fa-star",
@@ -272,6 +276,27 @@ export const testimonial = [
     name: "People 3",
     skill: "Food Reviewer",
   },
+  {
+    id: 4,
+    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
+    image: People1,
+    name: "People 4",
+    skill: "Food Reviewer",
+  },
+  {
+    id: 5,
+    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
+    image: People2,
+    name: "People 5",
+    skill: "Food Reviewer",
+  },
+  {
+    id: 6,
+    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
+    image: People3,
+    name: "People 6",
+    skill: "Food Reviewer",
+  },
 ];
 
 
@@ -364,14 +389,14 @@ export const Group = [
   {
     id: 1,
     image: Member,
-    name: "Retno Triyas",
-    role: "UI/UX Designer",
+    name: "Ahmad Diaz",
+    role: "Project Manager",
   },
   {
     id: 2,
     image: Member,
-    name: "Ahmad Ferdi",
-    role: "Backend Developer",
+    name: "Retno Triyas",
+    role: "UI/UX Designer",
   },
   {
     id: 3,
@@ -382,14 +407,14 @@ export const Group = [
   {
     id: 4,
     image: Member,
-    name: "Naufal Rafi",
-    role: "Database Engineer",
+    name: "Ahmad Ferdi",
+    role: "Backend Developer",
   },
   {
     id: 5,
     image: Member,
-    name: "Ahmad Diaz",
-    role: "Project Manager",
+    name: "Naufal Rafi",
+    role: "Partnership Coordinator",
   },
 ];
 

@@ -1,31 +1,29 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap'
-import logoImage from '../assets/img/logo.png'
+import { Container, Row, Col } from 'react-bootstrap';
+import logoImage from '../assets/img/logo.png';
 import { Group } from '../data/index';
 
 const AboutComponent = () => {
     return (
         <div className="container py-5">
             <Container>
-                {/* Judul */}
+
+                {/* Judul Section */}
+                {/* Tentang Kami dan Mitra dibagi 2 kolom */}
+                <Row className="align-items-center mb-5">
+                    {/* Kolom Kiri: Tentang Kami */}
+                    <Col md={6} className="mb-4 mb-md-0">
                 <h1 className="text-center fw-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif', color: 'black' }}>
                     Tentang Kami
                 </h1>
-                <p className="lead text-center mb-5" style={{ maxWidth: "900px", margin: "0 auto" }}>
-                    Kami adalah tim yang berdedikasi untuk membantu UMKM Chicken Sizzle berkembang dengan memanfaatkan teknologi informasi. Proyek ini dibuat oleh lima orang mahasiswa sebagai bagian dari tugas mata kuliah Analisa dan Perancangan Sistem Informasi.
-                </p>
-    
-                {/* Mitra */}
-                <h3 className="text-center mb-4 fw-semibold">Mitra Kami</h3>
-                <div className="row justify-content-center mb-5">
-                    <div className="col-md-6 col-lg-4">
-                        <div
-                            className="card border-0 rounded-4 shadow"
-                            style={{
-                                background: 'white',
-                                transition: 'transform 0.3s',
-                            }}
-                        >
+                        <p className="lead" style={{ textAlign: "justify" }}>
+                            Kami adalah tim yang berdedikasi untuk membantu UMKM <b>Chicken Sizzle</b> berkembang dengan memanfaatkan teknologi informasi. Proyek ini dibuat oleh lima orang mahasiswa sebagai bagian dari tugas mata kuliah Analisa dan Perancangan Sistem Informasi.
+                        </p>
+                    </Col>
+
+                    {/* Kolom Kanan: Mitra */}
+                    <Col md={6}>
+                        <div className="card border-0 rounded-4 shadow">
                             <div className="card-body text-center p-4">
                                 <div
                                     className="bg-white rounded-circle mx-auto d-flex align-items-center justify-content-center shadow-sm"
@@ -46,14 +44,14 @@ const AboutComponent = () => {
                                 </p>
                             </div>
                         </div>
-                    </div>
-                </div>
-    
+                    </Col>
+                </Row>
+
                 {/* Tim Pembuat */}
                 <h3 className="text-center mb-4 fw-semibold">Tim Pengembang</h3>
-                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+                <Row className="row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
                     {Group.map((Group, idx) => (
-                        <div className="col" key={idx}>
+                        <Col key={idx}>
                             <div
                                 className="card border-0 h-100 shadow-sm rounded-4"
                                 style={{
@@ -75,14 +73,12 @@ const AboutComponent = () => {
                                     <p className="card-text text-muted">{Group.role}</p>
                                 </div>
                             </div>
-                        </div>
+                        </Col>
                     ))}
-                </div>
+                </Row>
             </Container>
         </div>
     );
-    
-    
 };
 
 export default AboutComponent;
