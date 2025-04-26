@@ -1,75 +1,96 @@
-import React from 'react';
+import { Navbar, Container, Offcanvas, Nav } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
-const AdminSidebar = () => {
+const AdminNavbar = () => {
+  const [show, setShow] = useState(false);
+  const [changeColor, setChangeColor] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const changeBackgroundColor = () => {
+    setChangeColor(window.scrollY > 10);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeBackgroundColor);
+    return () => window.removeEventListener("scroll", changeBackgroundColor);
+  }, []);
+
   return (
     <>
-      {/* Tombol toggle offcanvas selalu tampil */}
-      <button
-        className="btn btn-danger m-3 position-fixed"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#mobileSidebar"
-        aria-controls="mobileSidebar"
-        style={{ zIndex: 1040 }}
-      >
-        ☰ Menu
-      </button>
-
-      {/* Sidebar Desktop (bisa tetap ada jika mau statis) */}
-      {/* Hapus bagian ini jika hanya ingin offcanvas */}
-      {/* <aside
-        className="d-none d-md-flex flex-column p-4 text-white position-fixed"
+      <Navbar
+        expand="lg"
+        className={`navbar py-3 shadow-sm fixed-top ${changeColor ? "color-active" : ""}`}
         style={{
-          width: '250px',
-          height: '100vh',
-          background: 'linear-gradient(to bottom, #f43f5e, #f97316)',
-          boxShadow: '4px 0 12px rgba(0,0,0,0.1)',
-          zIndex: 1030,
+          backdropFilter: 'blur(10px)',
+          backgroundColor: 'rgba(255, 255, 255, 0.85)',
+          borderBottom: '1px solid rgba(0,0,0,0.05)',
+          transition: 'all 0.5s ease'
         }}
       >
-        <h4 className="fw-bold mb-4">💸 Admin Panel</h4>
-        <SidebarLinks />
-      </aside> */}
+        <Container className="d-flex justify-content-between align-items-center">
+          <Navbar.Brand className="fs-4 fw-bold text-danger-emphasis" style={{ fontFamily: 'Poppins, sans-serif' }}>
+            Admin Panel<span style={{ color: '#ff5555' }}> 💸</span>
+          </Navbar.Brand>
 
-      {/* Sidebar Offcanvas (untuk semua perangkat) */}
-      <div
-        className="offcanvas offcanvas-start text-white"
-        tabIndex="-1"
-        id="mobileSidebar"
-        aria-labelledby="mobileSidebarLabel"
-        style={{
-          background: 'linear-gradient(to bottom, #f43f5e, #f97316)',
-          width: '250px',
-        }}
-      >
-        <div className="offcanvas-header">
-          <h5 className="offcanvas-title" id="mobileSidebarLabel">💸 Admin Panel</h5>
+          {/* Tombol menu selalu tampil */}
           <button
-            type="button"
-            className="btn-close btn-close-white"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div className="offcanvas-body p-3">
-          <SidebarLinks />
-        </div>
-      </div>
+            className="btn btn-danger"
+            onClick={handleShow}
+            style={{
+              borderRadius: '10px',
+              fontWeight: 'bold',
+              padding: '6px 14px',
+              boxShadow: '0 4px 10px rgba(244,63,94,0.4)',
+              fontSize: '1.1rem'
+            }}
+          >
+            ☰ Menu
+          </button>
+        </Container>
+      </Navbar>
+
+      <Offcanvas show={show} onHide={handleClose} placement="start"
+        style={{ background: 'linear-gradient(to bottom, #f43f5e, #f97316)', color: '#fff' }}
+      >
+        <Offcanvas.Header closeButton closeVariant="white">
+          <Offcanvas.Title>💸 Admin Panel</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+  <Nav className="flex-column gap-3">
+    <NavLink
+      className="text-white text-decoration-none nav-hover"
+      to="/admin"
+      onClick={handleClose}
+    >🏠 Dashboard</NavLink>
+    <NavLink
+      className="text-white text-decoration-none nav-hover"
+      to="/income"
+      onClick={handleClose}
+    >📥 Pemasukan</NavLink>
+    <NavLink
+      className="text-white text-decoration-none nav-hover"
+      to="/expense"
+      onClick={handleClose}
+    >📤 Pengeluaran</NavLink>
+    <NavLink
+      className="text-white text-decoration-none nav-hover"
+      to="/report"
+      onClick={handleClose}
+    >📊 Laporan</NavLink>
+    <a
+      className="text-white text-decoration-none nav-hover"
+      href="/"
+      onClick={handleClose}
+    >🚪 Logout</a>
+  </Nav>
+</Offcanvas.Body>
+
+      </Offcanvas>
     </>
   );
 };
 
-const SidebarLinks = () => {
-  return (
-    <ul className="nav flex-column gap-3">
-      <li><NavLink className="text-white text-decoration-none" to="/admin">🏠 Dashboard</NavLink></li>
-      <li><NavLink className="text-white text-decoration-none" to="/income">📥 Pemasukan</NavLink></li>
-      <li><NavLink className="text-white text-decoration-none" to="/expense">📤 Pengeluaran</NavLink></li>
-      <li><NavLink className="text-white text-decoration-none" to="/report">📊 Laporan</NavLink></li>
-      <li><a className="text-white text-decoration-none" href="/">🚪 Logout</a></li>
-    </ul>
-  );
-};
-
-export default AdminSidebar;
+export default AdminNavbar;

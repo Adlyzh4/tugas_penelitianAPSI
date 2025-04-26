@@ -18,7 +18,7 @@ import TestiComponent from '../components/TestiComponent';
 import ContactComponent from '../components/ContactComponent';
 
 
-const HomePage = () => {
+const HomePage = ({ addToCart }) => {
 
     let navigate = useNavigate();
     const menuRef = useRef(null);
@@ -74,7 +74,7 @@ const HomePage = () => {
                   </p>
       
                   {/* BUTTONS */}
-                  <div className="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3">
+                  <div className="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3 pb-5">
                     <button
                       className="btn btn-light btn-lg px-4 py-2"
                       style={{
@@ -125,7 +125,7 @@ const HomePage = () => {
                     style={{
                       maxWidth: '100%',
                       height: 'auto',
-                      maxHeight: '500px',
+                      maxHeight: '550px',
                       transition: 'transform 0.5s ease',
                       filter: 'drop-shadow(0 6px 12px rgba(0,0,0,0.2))',
                     }}
@@ -141,7 +141,7 @@ const HomePage = () => {
             </Container>
           </header>
       
-          <MenuComponent ref={menuRef} />
+          <MenuComponent ref={menuRef} addToCart={addToCart} />
           <TestiComponent />
           <FaqComponent />
           <ContactComponent />

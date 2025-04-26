@@ -70,6 +70,33 @@ body {
     color: var(--navbar-color);
 }
 
+.nav-hover {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .nav-hover:hover {
+    color: #ffe2e2 !important;
+  }
+  
+  .nav-hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 0;
+    background-color: #fff;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .nav-hover:hover::after {
+    width: 100%;
+  }
+  
+
 /* header */
 
 header {

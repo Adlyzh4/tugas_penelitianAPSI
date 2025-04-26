@@ -31,7 +31,7 @@ const ExpensePage = () => {
     const totalExpense = expenses.reduce((total, expense) => total + expense.amount, 0);
 
     return (
-        <div className="d-flex" style={{ minHeight: '100vh', fontFamily: 'Poppins, sans-serif' }}>
+        <div className="d-flex" style={{ minHeight: '100vh', fontFamily: 'Poppins, sans-serif', paddingTop: '90px' }}>
             
             {/* Sidebar Admin */}
             <AdminSidebar />

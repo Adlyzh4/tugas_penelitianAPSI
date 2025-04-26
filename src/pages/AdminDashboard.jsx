@@ -61,6 +61,7 @@ const AdminDashboard = () => {
         background: '#f8fafc',
         fontFamily: '"Poppins", sans-serif',
         overflowX: 'hidden',
+        paddingTop: '90px',
       }}
     >
       {/* Sidebar */}
