@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
 import AdminSidebar from '../components/adminSidebar';
 
 const IncomePage = () => {
@@ -32,27 +31,18 @@ const IncomePage = () => {
 
     return (
         <div className="d-flex" style={{ minHeight: '100vh', fontFamily: 'Poppins, sans-serif', paddingTop: '90px' }}>
-            
-            {/* Sidebar Admin */}
             <AdminSidebar />
 
-            {/* Konten */}
             <div className="flex-grow-1 p-4">
-                <div
-                    className="rounded-4 shadow-lg p-4 mb-4"
-                    style={{
-                        background: 'linear-gradient(to right, #facc15, #fb923c)',
-                        color: '#1f2937',
-                        boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
-                    }}
-                >
-                    <h2 className="fw-bold text-center mb-0">💰 Data Pemasukan</h2>
-                    <p className="text-center">Kelola semua data pemasukan dengan mudah dan elegan</p>
+                <div className="rounded-4 shadow-sm p-4 mb-4 bg-white">
+                    <h2 className="fw-bold text-center mb-1">💰 Data Pemasukan</h2>
+                    <p className="text-center text-muted">Kelola semua data pemasukan Chicken Sizzle</p>
                 </div>
 
-                <div className="table-responsive shadow rounded-4 mb-4 bg-white">
-                    <table className="table table-bordered table-hover text-center align-middle mb-0">
-                        <thead style={{ background: '#f87171', color: '#fff' }}>
+                {/* Tabel Pemasukan */}
+                <div className="table-responsive shadow-sm rounded-4 bg-white mb-5 p-3">
+                    <table className="table table-hover align-middle text-center mb-0">
+                        <thead style={{ backgroundColor: '#bbf7d0' }}>
                             <tr>
                                 <th>No</th>
                                 <th>Tanggal</th>
@@ -71,7 +61,7 @@ const IncomePage = () => {
                             ))}
                         </tbody>
                         <tfoot>
-                            <tr style={{ background: '#fef3c7' }}>
+                            <tr style={{ backgroundColor: '#fef9c3' }}>
                                 <td colSpan="3" className="fw-bold text-end">Total Pemasukan:</td>
                                 <td className="fw-bold text-success">Rp {totalIncome.toLocaleString()}</td>
                             </tr>
@@ -79,8 +69,9 @@ const IncomePage = () => {
                     </table>
                 </div>
 
-                <div className="mt-5">
-                    <h5 className="fw-bold mb-3">➕ Tambah Pemasukan Baru</h5>
+                {/* Form Tambah Pemasukan */}
+                <div className="p-4 rounded-4 shadow-sm bg-white">
+                    <h5 className="fw-bold mb-4">➕ Tambah Pemasukan Baru</h5>
                     <form className="row g-3" onSubmit={handleSubmit}>
                         <div className="col-md-4">
                             <input
@@ -88,7 +79,7 @@ const IncomePage = () => {
                                 name="date"
                                 value={form.date}
                                 onChange={handleChange}
-                                className="form-control rounded-3"
+                                className="form-control rounded-pill"
                                 required
                             />
                         </div>
@@ -98,8 +89,8 @@ const IncomePage = () => {
                                 name="description"
                                 value={form.description}
                                 onChange={handleChange}
-                                className="form-control rounded-3"
-                                placeholder="Deskripsi pemasukan"
+                                className="form-control rounded-pill"
+                                placeholder="Deskripsi Pemasukan"
                                 required
                             />
                         </div>
@@ -109,20 +100,15 @@ const IncomePage = () => {
                                 name="amount"
                                 value={form.amount}
                                 onChange={handleChange}
-                                className="form-control rounded-3"
+                                className="form-control rounded-pill"
                                 placeholder="Jumlah (Rp)"
                                 required
                             />
                         </div>
                         <div className="col-12 text-end">
                             <button
-                                className="btn text-white px-4"
-                                style={{
-                                    background: 'linear-gradient(to right, #ec4899, #8b5cf6)',
-                                    border: 'none',
-                                    borderRadius: '30px',
-                                    boxShadow: '0 8px 20px rgba(139, 92, 246, 0.3)'
-                                }}
+                                className="btn btn-primary rounded-pill px-5"
+                                style={{ background: 'linear-gradient(to right, #3b82f6, #6366f1)', border: 'none' }}
                             >
                                 Simpan
                             </button>

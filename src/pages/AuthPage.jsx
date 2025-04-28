@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Tambahkan ini!
 
 const AuthPage = () => {
     const [isLogin, setIsLogin] = useState(true);
+    const navigate = useNavigate(); // Tambahkan ini!
 
     const toggleForm = () => setIsLogin(!isLogin);
 
@@ -12,7 +14,7 @@ const AuthPage = () => {
         const password = e.target.password.value;
 
         if (email === 'adminchickensizzle@gmail.com' && password === 'admin1234567890') {
-            window.location.href = '/admin';
+            navigate('/admin'); // Ganti window.location.href menjadi navigate
         } else {
             alert('Email atau password salah!');
         }

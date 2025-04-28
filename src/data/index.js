@@ -4,9 +4,21 @@ import MenuImage3 from "../assets/img/menu/menu-3.jpeg";
 import MenuImage4 from "../assets/img/menu/menu-4.jpeg";
 import MenuImage5 from "../assets/img/menu/menu-5.jpeg";
 import MenuImage6 from "../assets/img/menu/menu-6.jpeg";
-import MenuImage7 from "../assets/img/menu/menu-7.jpg";
-import MenuImage8 from "../assets/img/menu/menu-8.jpg";
-import MenuImage9 from "../assets/img/menu/menu-9.jpg";
+import MenuImage7 from "../assets/img/menu/spaghetti.jpg";
+import MenuImage8 from "../assets/img/menu/soto-ayam.jpg";
+import MenuImage9 from "../assets/img/menu/soto-ceker.jpg";
+import MenuImage10 from "../assets/img/menu/nasi.jpg";
+import MenuImage11 from "../assets/img/menu/telur.jpg";
+import MenuImage12 from "../assets/img/menu/brown-sauce.jpg";
+import MenuImage13 from "../assets/img/menu/red-sauce.jpg";
+import MenuImage14 from "../assets/img/menu/black-sauce.jpg";
+import MenuImage15 from "../assets/img/menu/chicken-pop.jpeg";
+import MenuImage16 from "../assets/img/menu/french-fries.jpg";
+import MenuImage17 from "../assets/img/menu/dimsum.jpg";
+import MenuImage18 from "../assets/img/menu/cireng.jpg";
+import MenuImage19 from "../assets/img/menu/teh-manis.jpeg";
+import MenuImage20 from "../assets/img/menu/teh-tawar.jpg";
+import MenuImage21 from "../assets/img/menu/air-mineral.jpg";
 
 import People1 from "../assets/img/testi/people-1.jpg";
 import People2 from "../assets/img/testi/people-2.jpg";
@@ -51,6 +63,8 @@ export const navLinks = [
   }
 ];
 
+
+// data menu
 export const semuaMenu = {
   makanan: [
     {
@@ -58,9 +72,9 @@ export const semuaMenu = {
       image: MenuImage1,
       star1: "fa-solid fa-star",
       rating: "4.5",
-      title: "Steak Ayam Barbeque",
-      price: "Rp.300.000",
-      promoPrice: "Rp. 250.000",
+      title: "Chicken Steak",
+      price: "Rp.25.000",
+      promoPrice: "Rp. 20.000",
       buy: "Pesan Sekarang",
       promoLogo,
       delay: "1300",
@@ -71,8 +85,8 @@ export const semuaMenu = {
       image: MenuImage2,
       star1: "fa-solid fa-star",
       rating: "4.5",
-      title: "Steak Saus Spesial",
-      price: "Rp.340.000",
+      title: "Rice Bowl",
+      price: "Rp.22.000",
       buy: "Pesan Sekarang",
       delay: "1600",
     },
@@ -81,203 +95,302 @@ export const semuaMenu = {
       image: MenuImage3,
       star1: "fa-solid fa-star",
       rating: "4.5",
-      title: "Steak Saus Madu",
-      price: "Rp.280.000",
+      title: "Chicken Katsu",
+      price: "Rp.20.000",
       buy: "Pesan Sekarang",
       delay: "1900",
     },
-  ],
-  addon: [
     {
       id: 4,
       image: MenuImage4,
       star1: "fa-solid fa-star",
       rating: "4.5",
-      title: "Kentang Goreng",
-      price: "Rp. 420.000",
+      title: "Chicken Grill",
+      price: "Rp. 25.000",
       buy: "Pesan Sekarang",
       delay: "",
     },
     {
       id: 5,
-      image: MenuImage5,
+      image: MenuImage7,
+      star1: "fa-solid fa-star",
+      rating: "4.5",
+      title: "Spaghetti",
+      price: "Rp. 15.000",
+      buy: "Pesan Sekarang",
+      delay: "",
+    },
+    {
+      id: 6,
+      image: MenuImage8,
+      star1: "fa-solid fa-star",
+      rating: "4.5",
+      title: "Soto Ayam",
+      price: "Rp. 15.000",
+      buy: "Pesan Sekarang",
+      delay: "",
+    },
+    {
+      id: 7,
+      image: MenuImage9,
+      star1: "fa-solid fa-star",
+      rating: "4.5",
+      title: "Soto Ceker",
+      price: "Rp. 15.000",
+      buy: "Pesan Sekarang",
+      delay: "",
+    },
+  ],
+  addon: [
+    {
+      id: 8,
+      image: MenuImage10,
       star1: "fa-solid fa-star",
       rating: "4.5",
       title: "Nasi Putih",
-      price: "Rp.380.000",
+      price: "Rp. 5.000",
+      buy: "Pesan Sekarang",
+      delay: "",
+    },
+    {
+      id: 9,
+      image: MenuImage11,
+      star1: "fa-solid fa-star",
+      rating: "4.5",
+      title: "Telur",
+      price: "Rp.5.000",
+      buy: "Pesan Sekarang",
+      delay: "300",
+    },
+    {
+      id: 10,
+      image: MenuImage12,
+      star1: "fa-solid fa-star",
+      rating: "4.5",
+      title: "Brown Sauce",
+      price: "Rp.5.000",
+      buy: "Pesan Sekarang",
+      delay: "300",
+    },
+    {
+      id: 11,
+      image: MenuImage13,
+      star1: "fa-solid fa-star",
+      rating: "4.5",
+      title: "Red Sauce",
+      price: "Rp.5.000",
+      buy: "Pesan Sekarang",
+      delay: "300",
+    },
+    {
+      id: 12,
+      image: MenuImage14,
+      star1: "fa-solid fa-star",
+      rating: "4.5",
+      title: "Black Sauce",
+      price: "Rp.5.000",
       buy: "Pesan Sekarang",
       delay: "300",
     },
   ],
   cemilan: [
     {
-      id: 6,
+      id: 13,
       image: MenuImage6,
       star1: "fa-solid fa-star",
       rating: "4.5",
-      title: "Sosis Goreng",
-      price: "Rp.300.000",
+      title: "Mix Box",
+      price: "Rp.20.000",
+      buy: "Pesan Sekarang",
+      delay: "600",
+    },
+    {
+      id: 14,
+      image: MenuImage15,
+      star1: "fa-solid fa-star",
+      rating: "4.5",
+      title: "Chicken Pop",
+      price: "Rp.15.000",
+      buy: "Pesan Sekarang",
+      delay: "600",
+    },
+    {
+      id: 15,
+      image: MenuImage16,
+      star1: "fa-solid fa-star",
+      rating: "4.5",
+      title: "French Fries",
+      price: "Rp.12.000",
+      buy: "Pesan Sekarang",
+      delay: "600",
+    },
+    {
+      id: 16,
+      image: MenuImage17,
+      star1: "fa-solid fa-star",
+      rating: "4.5",
+      title: "Dimsum",
+      price: "Rp.10.000",
+      buy: "Pesan Sekarang",
+      delay: "600",
+    },
+    {
+      id: 17,
+      image: MenuImage18,
+      star1: "fa-solid fa-star",
+      rating: "4.5",
+      title: "Cireng",
+      price: "Rp.10.000",
       buy: "Pesan Sekarang",
       delay: "600",
     },
   ],
   minuman: [
     {
-      id: 7,
-      image: MenuImage1,
+      id: 18,
+      image: MenuImage19,
       star1: "fa-solid fa-star",
       star5: "fa-solid fa-star-half-stroke",
       rating: "4.5",
-      title: "Es Teh Manis",
-      price: "Rp.340.000",
+      title: "Teh Manis",
+      price: "Rp.5.000",
       buy: "Pesan Sekarang",
       delay: "",
     },
     {
-      id: 8,
-      image: MenuImage2,
+      id: 19,
+      image: MenuImage20,
       star1: "fa-solid fa-star",
       star5: "fa-solid fa-star-half-stroke",
       rating: "4.5",
-      title: "Lemon Tea",
-      price: "Rp.400.000",
+      title: "Teh Tawar",
+      price: "Rp.3.000",
       buy: "Pesan Sekarang",
       delay: "300",
     },
     {
-      id: 9,
-      image: MenuImage3,
+      id: 20,
+      image: MenuImage21,
       star1: "fa-solid fa-star",
       star5: "fa-solid fa-star-half-stroke",
       rating: "4.5",
-      title: "Milkshake",
-      price: "Rp.320.000",
+      title: "Air Mineral",
+      price: "Rp.5.000",
       buy: "Pesan Sekarang",
       delay: "600",
     },
   ],
 };
 
+
+// data menucomponent
 export const menuTerbaru = [
   {
     id: 1,
     image: MenuImage1,
     star1: "fa-solid fa-star",
-    star2: "fa-solid fa-star",
-    star3: "fa-solid fa-star",
-    star4: "fa-solid fa-star",
-    star5: "fa-solid fa-star-half-stroke",
-    title: "Steak Ayam Barbeque",
-    price: "Rp.300.000",
+    rating: "4.5",
+    title: "Chicken Steak",
+    price: "Rp.25.000",
+    promoPrice: "Rp. 20.000",
     buy: "Pesan Sekarang",
-    delay: "",
+    promoLogo,
+    delay: "1300",
+    isPromo: true,
   },
   {
     id: 2,
     image: MenuImage2,
     star1: "fa-solid fa-star",
-    star2: "fa-solid fa-star",
-    star3: "fa-solid fa-star",
-    star4: "fa-solid fa-star",
-    star5: "fa-solid fa-star",
-    title: "Steak Ayam Barbeque",
-    price: "Rp.340.000",
+    rating: "4.5",
+    title: "Rice Bowl",
+    price: "Rp.22.000",
     buy: "Pesan Sekarang",
-    delay: "200",
+    delay: "1600",
   },
   {
     id: 3,
     image: MenuImage3,
     star1: "fa-solid fa-star",
-    star2: "fa-solid fa-star",
-    star3: "fa-solid fa-star",
-    star4: "fa-solid fa-star",
-    star5: "fa-solid fa-star",
-    title: "Steak Ayam Barbeque",
-    price: "Rp.280.000",
+    rating: "4.5",
+    title: "Chicken Katsu",
+    price: "Rp.20.000",
     buy: "Pesan Sekarang",
-    delay: "400",
+    delay: "1900",
   },
   {
-    id: 4,
-    image: MenuImage4,
+    id: 13,
+    image: MenuImage6,
     star1: "fa-solid fa-star",
-    star2: "fa-solid fa-star",
-    star3: "fa-solid fa-star",
-    star4: "fa-solid fa-star",
-    star5: "fa-solid fa-star",
-    title: "Steak Ayam Barbeque",
-    price: "Rp.420.000",
+    rating: "4.5",
+    title: "Mix Box",
+    price: "Rp.20.000",
+    buy: "Pesan Sekarang",
+    delay: "600",
+  },
+  {
+    id: 14,
+    image: MenuImage15,
+    star1: "fa-solid fa-star",
+    rating: "4.5",
+    title: "Chicken Pop",
+    price: "Rp.15.000",
+    buy: "Pesan Sekarang",
+    delay: "600",
+  },
+  {
+    id: 18,
+    image: MenuImage19,
+    star1: "fa-solid fa-star",
+    star5: "fa-solid fa-star-half-stroke",
+    rating: "4.5",
+    title: "Teh Manis",
+    price: "Rp.5.000",
     buy: "Pesan Sekarang",
     delay: "",
   },
-  {
-    id: 5,
-    image: MenuImage5,
-    star1: "fa-solid fa-star",
-    star2: "fa-solid fa-star",
-    star3: "fa-solid fa-star",
-    star4: "fa-solid fa-star",
-    star5: "fa-solid fa-star",
-    title: "Steak Ayam Barbeque",
-    price: "Rp.380.000",
-    buy: "Pesan Sekarang",
-    delay: "200",
-  },
-  {
-    id: 6,
-    image: MenuImage6,
-    star1: "fa-solid fa-star",
-    star2: "fa-solid fa-star",
-    star3: "fa-solid fa-star",
-    star4: "fa-solid fa-star",
-    star5: "fa-solid fa-star",
-    title: "Steak Ayam Barbeque",
-    price: "Rp.300.000",
-    buy: "Pesan Sekarang",
-    delay: "400",
-  },
 ];
 
+// data testimonial
 export const testimonial = [
   {
     id: 1,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
+    desc: "Menunya enak2 & murmer 😋 tempatnya mungil tp cukup nyaman",
     image: People1,
     name: "People 1",
     skill: "Food Reviewer",
   },
   {
     id: 2,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
+    desc: "Enak chicken grill dan chicken steak nya, sausnya banyak, udah include salad, kentang dan harga murah banget",
     image: People2,
     name: "People 2",
     skill: "Food Reviewer",
   },
   {
     id: 3,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
+    desc: "Pelayanan cepat, harga kaki lima rasa bintang lima, pasti ngak nyesal makan disini 👍👍👍👍👍👍👍👍👍",
     image: People3,
     name: "People 3",
     skill: "Food Reviewer",
   },
   {
     id: 4,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
+    desc: "Tempatnya sangat nyaman",
     image: People1,
     name: "People 4",
     skill: "Food Reviewer",
   },
   {
     id: 5,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
+    desc: "Steak Rasa Bintang 5, harga kaki 5, cocok buat anak kampus banget",
     image: People2,
     name: "People 5",
     skill: "Food Reviewer",
   },
   {
     id: 6,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
+    desc: "Rekomendasi ini tempat buat kumpul dan kluarga",
     image: People3,
     name: "People 6",
     skill: "Food Reviewer",
@@ -285,51 +398,7 @@ export const testimonial = [
 ];
 
 
-export const dataSwiper = [
-  {
-    id: 1,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People1,
-    name: "People 1",
-    skill: "Food Reviewer",
-  },
-  {
-    id: 2,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People2,
-    name: "People 2",
-    skill: "Food Reviewer",
-  },
-  {
-    id: 3,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People3,
-    name: "People 3",
-    skill: "Food Reviewer",
-  },
-  {
-    id: 4,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People1,
-    name: "People 4",
-    skill: "Food Reviewer",
-  },
-  {
-    id: 5,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People2,
-    name: "People 5",
-    skill: "Food Reviewer",
-  },
-  {
-    id: 6,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People3,
-    name: "People 6",
-    skill: "Food Reviewer",
-  },
-];
-
+// data faq
 export const faq = [
   {
     id: 1,
@@ -369,7 +438,7 @@ export const faq = [
   },
 ];
 
-
+// data about
 export const Group = [
   {
     id: 1,

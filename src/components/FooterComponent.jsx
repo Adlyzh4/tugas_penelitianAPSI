@@ -20,11 +20,11 @@ export const FooterComponents = () => {
                         </p>
                         <div className='no mb-2 mt-4 d-flex align-items-center gap-2'>
                             <i className='fa-brands fa-whatsapp fs-5 text-success'></i>
-                            <p className='m-0 text-dark'>+62 123-999-9999</p>
+                            <p className='m-0 text-dark'>+62 878-5577-0953</p>
                         </div>
                         <div className='mail d-flex align-items-center gap-2'>
                             <i className='fa-regular fa-envelope fs-5 text-danger'></i>
-                            <p className='m-0 text-dark'>ChickenSizzle@Gmail.com</p>
+                            <p className='m-0 text-dark'>chickensizzle95@gmail.com</p>
                         </div>
                     </Col>
     

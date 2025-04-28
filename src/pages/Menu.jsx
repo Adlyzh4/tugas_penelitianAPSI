@@ -10,7 +10,7 @@ const Menu = forwardRef(({ addToCart }, ref) => {
 
     
 
-    const renderKategori = (kategoriName, menus) => (
+    const renderKategori = (kategoriName, semuaMenu) => (
         <>
             <Row className="mb-4 mt-5">
                 <Col>
@@ -21,7 +21,7 @@ const Menu = forwardRef(({ addToCart }, ref) => {
             </Row>
 
             <Row className="g-4">
-                {menus.map(menu => (
+                {semuaMenu.map(menu => (
                     <Col key={menu.id} md={6} lg={4}>
                         <div
                             className="menu-card bg-white shadow rounded-4 h-100 position-relative d-flex flex-column promo-glow"

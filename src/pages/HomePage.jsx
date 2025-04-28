@@ -1,6 +1,5 @@
 import { Container, Row, Col } from 'react-bootstrap'
 import logoImage from '../assets/img/logo.png'
-import { menuTerbaru, dataSwiper, testimonial } from '../data/index'
 import { useNavigate } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import FaqComponent from '../components/FaqComponent'
@@ -44,34 +43,35 @@ const HomePage = ({ addToCart }) => {
               <Row className="header-box align-items-center pt-3 flex-column-reverse flex-lg-row text-center text-lg-start">
                 {/* KATA-KATA */}
                 <Col lg={6} className="mt-4 mt-lg-0">
-                  <h1
-                    className="mb-4 fw-bold"
+                <h1
+                  className="mb-4 fw-bold"
+                  style={{
+                    fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+                    fontFamily: 'Poppins, sans-serif',
+                  }}
+                >
+                  Temukan <br />
+                  <span
                     style={{
-                      fontSize: 'clamp(2rem, 5vw, 3.5rem)',
-                      fontFamily: 'Poppins, sans-serif',
+                      color: '#fff6e0',
+                      textShadow: '1px 1px 2px rgba(0,0,0,0.2)',
                     }}
                   >
-                    Temukan <br />
-                    <span
-                      style={{
-                        color: '#fff6e0',
-                        textShadow: '1px 1px 2px rgba(0,0,0,0.2)',
-                      }}
-                    >
-                      Steak Ayam Ter-Enak
-                    </span>{' '}
-                    Disini
-                  </h1>
-                  <p
-                    className="mb-4"
-                    style={{
-                      fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
-                      lineHeight: '1.7',
-                      color: '#fceeee',
-                    }}
-                  >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita nemo quae ut harum! Expedita, nobis!
-                  </p>
+                    Steak Ayam Ter-Enak
+                  </span>{' '}
+                  Disini
+                </h1>
+                <p
+                  className="mb-4"
+                  style={{
+                    fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
+                    lineHeight: '1.7',
+                    color: '#fceeee',
+                  }}
+                >
+                  Nikmati kelezatan steak ayam yang juicy, gurih, dan penuh rasa!  
+                  Sajian spesial kami siap memanjakan lidahmu di setiap gigitan.
+                </p>
       
                   {/* BUTTONS */}
                   <div className="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3 pb-5">

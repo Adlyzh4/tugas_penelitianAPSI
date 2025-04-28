@@ -18,10 +18,10 @@ const NavbarComponents = ({ cartItems = [], setCartItems }) => {
     }, []);
 
     const handleCheckout = () => {
-        const message = cartItems.map(item => `- ${item.title} x${item.quantity}`).join('%0A');
+        const message = cartItems.map(item => `- ${item.title} x${item.quantity} Rp.${item.price}`).join('%0A');
         const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
         const fullMessage = `Halo, saya ingin memesan:%0A${message}%0A%0ATotal: Rp ${total.toLocaleString('id-ID')}`;
-        const whatsappLink = `https://wa.me/6281234567890?text=${fullMessage}`;
+        const whatsappLink = `https://wa.me/6287855770953?text=${fullMessage}`;
         window.open(whatsappLink, '_blank');
     };
 

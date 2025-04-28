@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
 import AdminSidebar from '../components/adminSidebar';
 
 const ExpensePage = () => {
@@ -21,7 +20,7 @@ const ExpensePage = () => {
                 id: expenses.length + 1,
                 date: form.date,
                 description: form.description,
-                amount: parseFloat(form.amount)
+                amount: parseFloat(form.amount),
             };
             setExpenses([...expenses, newExpense]);
             setForm({ date: '', description: '', amount: '' });
@@ -38,18 +37,20 @@ const ExpensePage = () => {
 
             {/* Konten */}
             <div className="flex-grow-1 p-4">
+                {/* Header */}
                 <div
                     className="rounded-4 shadow-lg p-4 mb-4"
                     style={{
                         background: 'linear-gradient(to right, #38bdf8, #818cf8)',
                         color: '#fff',
-                        boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
+                        boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
                     }}
                 >
                     <h2 className="fw-bold text-center mb-0">💸 Data Pengeluaran</h2>
                     <p className="text-center">Catat dan kelola semua pengeluaran usaha dengan rapi dan stylish</p>
                 </div>
 
+                {/* Table Pengeluaran */}
                 <div className="table-responsive shadow rounded-4 mb-4 bg-white">
                     <table className="table table-bordered table-hover text-center align-middle mb-0">
                         <thead style={{ background: '#60a5fa', color: '#fff' }}>
@@ -66,19 +67,20 @@ const ExpensePage = () => {
                                     <td>{index + 1}</td>
                                     <td>{expense.date}</td>
                                     <td>{expense.description}</td>
-                                    <td>Rp {expense.amount.toLocaleString()}</td>
+                                    <td>Rp {expense.amount.toLocaleString('id-ID')}</td>
                                 </tr>
                             ))}
                         </tbody>
                         <tfoot>
                             <tr style={{ background: '#e0f2fe' }}>
                                 <td colSpan="3" className="fw-bold text-end">Total Pengeluaran:</td>
-                                <td className="fw-bold text-danger">Rp {totalExpense.toLocaleString()}</td>
+                                <td className="fw-bold text-danger">Rp {totalExpense.toLocaleString('id-ID')}</td>
                             </tr>
                         </tfoot>
                     </table>
                 </div>
 
+                {/* Form Tambah Pengeluaran */}
                 <div className="mt-5">
                     <h5 className="fw-bold mb-3">➖ Tambah Pengeluaran Baru</h5>
                     <form className="row g-3" onSubmit={handleSubmit}>
@@ -116,12 +118,13 @@ const ExpensePage = () => {
                         </div>
                         <div className="col-12 text-end">
                             <button
+                                type="submit"
                                 className="btn text-white px-4"
                                 style={{
                                     background: 'linear-gradient(to right, #ec4899, #8b5cf6)',
                                     border: 'none',
                                     borderRadius: '30px',
-                                    boxShadow: '0 8px 20px rgba(139, 92, 246, 0.3)'
+                                    boxShadow: '0 8px 20px rgba(139, 92, 246, 0.3)',
                                 }}
                             >
                                 Simpan
